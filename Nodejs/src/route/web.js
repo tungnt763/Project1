@@ -14,6 +14,7 @@ let initWebRoutes = (app) => {
     router.get('/delete-crud', homeController.deleteCRUD);
 
     router.post('/api/login', userController.handleLogin);
+    router.get('/api/get-all-users', userController.handleGetAllUser);
 
     // res api -> muon lay data thi dung method get
     // muon tao data thi dung method post
