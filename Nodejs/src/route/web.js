@@ -1,7 +1,8 @@
 // moi khi truy cap vao 1 duong link cua website thi no se chay vao file nay dau tien
 import express from "express";
 import homeController from "../controller/homeController";
-import userController from "../controller/userController"
+import userController from "../controller/userController";
+import doctorController from "../controller/doctorController";
 let router = express.Router();
 let initWebRoutes = (app) => {
     router.get('/', homeController.getHomePage);
@@ -18,6 +19,9 @@ let initWebRoutes = (app) => {
     router.post('/api/create-new-user', userController.handleCreateNewUser);
     router.put('/api/edit-user', userController.handleEditUser);
     router.delete('/api/delete-user', userController.handleDeleteUser); // restAPI
+    router.get('/api/allcode', userController.getAllCode);
+
+    router.get('/api/top-doctor-home', doctorController.getTopDoctorHome);
 
     // res api -> muon lay data thi dung method get
     // muon tao data thi dung method post
