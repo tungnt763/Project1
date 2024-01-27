@@ -22,7 +22,11 @@ let initWebRoutes = (app) => {
     router.get('/api/allcode', userController.getAllCode);
 
     router.get('/api/top-doctor-home', doctorController.getTopDoctorHome);
-
+    router.get('/api/get-all-doctors', doctorController.getAllDoctors);
+    router.post('/api/save-info-doctor', doctorController.postInfoDoctor);
+    router.get('/api/get-detail-doctor-by-id', doctorController.getDetailDoctorById);
+    router.post('/api/bulk-create-schedule', doctorController.bulkCreateSchedule);
+    router.get('/api/get-schedule-doctor-by-date', doctorController.getScheduleByDate);
     // res api -> muon lay data thi dung method get
     // muon tao data thi dung method post
     // muon xoa data thi dung method delete

@@ -55,11 +55,12 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-color: #eee;
+                border-radius: 10px;
                 &.section-specialty {
                     background-image: url('../../assets/specialty/101627-co-xuong-khop.png');
                 }
                 &.section-medical-facility {
-                    background-image: url('../../assets/madicalfacility/103904-logo-thucuc.png');
+                    background-image: url('../../assets/madicalfacility/152704logo-bvcr-moi.jpg');
                 }
                 &.section-outstanding-doctor {
                     // background-image: url('../../assets/outstanding-doctor/103848anh-dai-dien-bs.jpg');
@@ -116,9 +117,11 @@
     }
     .section-customize {
         padding: 5px;
+        cursor: pointer;
         .customize-border {
             border: 1px solid grey;
             padding: 15px;
+            border-radius: 10px;
         }
     }
 }

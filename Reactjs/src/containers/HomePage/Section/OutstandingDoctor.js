@@ -4,6 +4,7 @@ import * as actions from "../../../store/actions"
 import { FormattedMessage } from 'react-intl';
 import Slider from "react-slick";
 import { languages } from '../../../utils';
+import { withRouter } from 'react-router';
 
 class OutstandingDoctor extends Component {
 
@@ -23,6 +24,12 @@ class OutstandingDoctor extends Component {
             this.setState({
                 arrDoctors: this.props.topDoctorsRedux
             })
+        }
+    }
+
+    handleViewDetailDoctor = (doctor) => {
+        if (this.props.history) {
+            this.props.history.push(`/detail-doctor/${doctor.id}`)
         }
     }
 
@@ -49,7 +56,7 @@ class OutstandingDoctor extends Component {
                                 let nameVi = `${item.positionData.valueVi}, ${item.lastName} ${item.firstName}`;
                                 let nameEn = `${item.positionData.valueEn}, ${item.firstName} ${item.lastName}`;
                                 return (
-                                    <div className="section-customize" key={index}>
+                                    <div className="section-customize" key={index} onClick={() => this.handleViewDetailDoctor(item)}>
                                         <div className="customize-border">
                                             <div className="outer-bg">
                                                 <div className="bg-image section-outstanding-doctor" 
@@ -58,7 +65,7 @@ class OutstandingDoctor extends Component {
                                             </div>
                                             <div className="position text-center">
                                                 <div>{language === languages.VI ? nameVi : nameEn}</div>
-                                                <div>Cơ xương khớp 1</div>
+                                                <div>Sức khỏe tâm thần</div>
                                             </div>
                                         </div>
                                     </div>
@@ -87,4 +94,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(OutstandingDoctor);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(OutstandingDoctor));

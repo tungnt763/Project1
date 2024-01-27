@@ -18,27 +18,27 @@ class MedicalFacility extends Component {
                         <Slider {...this.props.settings}>
                             <div className="section-customize">
                                 <div className="bg-image section-medical-facility" />
-                                <div>Hệ thống y tế Thu Cúc 1</div>
+                                <div>Hệ thống y tế Thu Cúc</div>
                             </div>
                             <div className="section-customize">
                                 <div className="bg-image section-medical-facility" />
-                                <div>Hệ thống y tế Thu Cúc 2</div>
+                                <div>Bệnh viện Hữu nghị Việt Đức</div>
                             </div>
                             <div className="section-customize">
                                 <div className="bg-image section-medical-facility" />
-                                <div>Hệ thống y tế Thu Cúc 3</div>
+                                <div>Bệnh viện Chợ Rẫy</div>
                             </div>
                             <div className="section-customize">
                                 <div className="bg-image section-medical-facility" />
-                                <div>Hệ thống y tế Thu Cúc 4</div>
+                                <div>Bệnh viện Ung bướu Hưng Việt</div>
                             </div>
                             <div className="section-customize">
                                 <div className="bg-image section-medical-facility" />
-                                <div>Hệ thống y tế Thu Cúc 5</div>
+                                <div>Hệ thống y tế MEDLATEC</div>
                             </div>
                             <div className="section-customize">
                                 <div className="bg-image section-medical-facility" />
-                                <div>Hệ thống y tế Thu Cúc 6</div>
+                                <div>Bệnh viện Đa khoa Hồng Phát</div>
                             </div>
                         </Slider>
                     </div>
